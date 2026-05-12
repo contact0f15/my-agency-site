@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スポットpage | 政治家のための初期費用0円・月額980円Web制作サービス</title>
+    <meta name="description" content="地方議員、候補者、会派向けの圧倒的なコストパフォーマンスを誇るWeb制作代行サービス「スポットpage」。初期費用0円、月額980円（税込1,078円）でプロ仕様のサイトを実現。">
+    
+    <!-- Google Fonts: 信頼感のある明朝体と視認性の高いゴシック体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#1e3a8a',    // 信頼のロイヤルブルー (blue-900)
+                            light: '#eff6ff',   // 背景用薄い青 (blue-50)
+                            gold: '#ca8a04',    // アクセントのゴールド (yellow-600)
+                            red: '#dc2626',     // 情熱的なレッド (red-600)
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* スムーススクロール */
+        html { scroll-behavior: smooth; }
+        /* 背景画像のパララックス風効果設定 */
+        .bg-hero {
+            background-image: url('https://images.unsplash.com/photo-1541872526848-d0ce59bbcb18?auto=format&fit=crop&q=80&w=2000');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- ヘッダー -->
+    <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100 transition-all">
+        <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                <div class="w-8 h-8 bg-brand-blue rounded flex items-center justify-center text-white font-bold font-serif">S</div>
+                <span class="font-bold text-xl tracking-tight text-brand-blue">スポットpage</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+                <a href="#price" class="hover:text-brand-blue transition-colors">価格の秘密</a>
+                <a href="#features" class="hover:text-brand-blue transition-colors">機能・特徴</a>
+                <a href="#samples" class="hover:text-brand-blue transition-colors">サンプル</a>
+            </nav>
+            <a href="#contact" class="bg-brand-red hover:bg-red-700 text-white px-6 py-2.5 rounded-full font-bold shadow-md shadow-brand-red/30 transition-all transform hover:scale-105 text-sm md:text-base">
+                お申し込みはこちら
+            </a>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="relative pt-20 pb-24 md:pt-32 md:pb-32 bg-hero overflow-hidden">
+        <div class="absolute inset-0 bg-brand-blue/85 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-blue/90 to-transparent"></div>
+        
+        <div class="relative z-10 max-w-6xl mx-auto px-4 mt-8 md:mt-16">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
+                
+                <!-- 左側：テキストエリア -->
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <span class="inline-block py-1 px-4 rounded-full bg-brand-gold/20 border border-brand-gold/50 text-brand-gold font-bold text-sm md:text-base mb-6 animate-pulse">
+                        政治家（地方議員・候補者・会派）専用 Web制作代行
+                    </span>
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 drop-shadow-lg">
+                        圧倒的な信頼を、<br class="md:hidden">
+                        <span class="text-brand-gold">驚きの価格</span>で。
+                    </h1>
+                    <p class="text-lg md:text-xl text-blue-100 font-medium mb-8 drop-shadow leading-relaxed">
+                        初期費用 <span class="text-white font-bold text-3xl">0</span> 円。<br>
+                        月額 <span class="text-white font-bold text-4xl text-brand-gold">980</span> 円で始める、<br>
+                        プロフェッショナルな政治活動の拠点。
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <a href="#contact" class="bg-brand-red hover:bg-red-700 text-white text-lg font-bold px-8 py-4 rounded-full shadow-xl shadow-brand-red/40 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                            <!-- Icon: Chevron Right -->
+                            今すぐWebサイトを開設
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                    <p class="text-white/80 mt-4 text-sm">※最短即日〜数営業日で公開可能 / カード払い対応</p>
+                </div>
+
+                <!-- 右側：画像（モックアップ）エリア -->
+                <div class="w-full lg:w-1/2 relative mt-8 lg:mt-0">
+                    <!-- PC用モックアップ風 -->
+                    <div class="relative w-full max-w-[500px] mx-auto lg:max-w-none transform lg:rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <!-- ブラウザのヘッダーバー -->
+                        <div class="bg-gray-800 rounded-t-xl p-2 md:p-3 border-b border-gray-700 flex items-center gap-1.5 md:gap-2">
+                            <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-red-500"></div>
+                            <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-green-500"></div>
+                            <div class="ml-2 md:ml-4 bg-gray-700 rounded-md h-4 w-1/2 opacity-50"></div>
+                        </div>
+                        <!-- PC画面部分 -->
+                        <div class="bg-gray-100 rounded-b-xl overflow-hidden shadow-2xl border-x border-b border-gray-800 aspect-[16/10] relative group">
+                            <!-- ★ここにPC版HPのスクショ画像URLを入れます -->
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000" alt="PCサイトイメージ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                        </div>
+
+                        <!-- スマホ用モックアップ風（右下に重ねる） -->
+                        <div class="absolute -bottom-6 -right-2 md:-bottom-12 md:-right-8 w-2/5 max-w-[140px] md:max-w-[180px] z-20 transform -rotate-6 hover:rotate-0 transition-transform duration-500">
+                            <div class="bg-gray-900 rounded-[24px] md:rounded-[32px] p-1.5 md:p-2 shadow-2xl border border-gray-700 relative">
+                                <!-- インカメラのパンチホール -->
+                                <div class="absolute top-3 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-gray-950 rounded-full z-30"></div>
+                                <!-- スマホ画面部分 -->
+                                <div class="bg-gray-100 rounded-[18px] md:rounded-[24px] overflow-hidden aspect-[9/19] relative group">
+                                    <!-- ★ここにスマホ版HPのスクショ画像URLを入れます -->
+                                    <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?auto=format&fit=crop&q=80&w=600" alt="スマホサイトイメージ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 衝撃の価格セクション -->
+    <section id="price" class="py-24 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-6 font-serif">
+                Web制作の常識を覆す、<br class="md:hidden"><span class="text-brand-red">衝撃のコストパフォーマンス</span>
+            </h2>
+            <p class="text-gray-600 mb-12 text-lg md:text-xl">
+                通常、数十万〜100万円以上かかるプロ仕様のWebサイト制作。<br class="hidden md:block">
+                スポットpageなら、負担を極限まで減らしてスタートできます。
+            </p>
+
+            <div class="bg-gradient-to-br from-brand-blue to-blue-800 rounded-3xl shadow-2xl p-8 md:p-12 text-white relative overflow-hidden transform hover:scale-[1.02] transition-transform duration-300">
+                <!-- 装飾 -->
+                <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-white opacity-5"></div>
+                <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-48 h-48 rounded-full bg-brand-gold opacity-10"></div>
+                
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="text-left flex-1">
+                        <div class="inline-block bg-brand-red text-white font-bold px-4 py-1 rounded-full text-sm mb-4">
+                            他社比較：初期費用 数十万〜100万円が...
+                        </div>
+                        <h3 class="text-3xl md:text-5xl font-black mb-2">初期費用 <span class="text-brand-gold text-5xl md:text-7xl">0</span><span class="text-2xl md:text-3xl">円</span></h3>
+                        <p class="text-blue-200 text-lg">制作費・サーバー設定費など一切不要。</p>
+                    </div>
+                    
+                    <div class="hidden md:block w-px h-32 bg-blue-700"></div>
+                    <div class="w-full md:hidden h-px bg-blue-700 my-4"></div>
+                    
+                    <div class="text-left flex-1">
+                        <div class="inline-block bg-blue-700 text-white font-bold px-4 py-1 rounded-full text-sm mb-4">
+                            プロ仕様のサイト維持費が...
+                        </div>
+                        <h3 class="text-3xl md:text-5xl font-black mb-2">月額 <span class="text-brand-gold text-5xl md:text-7xl">980</span><span class="text-2xl md:text-3xl">円</span></h3>
+                        <p class="text-blue-200 text-sm">（税込1,078円）</p>
+                    </div>
+                </div>
+
+                <div class="mt-10 pt-8 border-t border-blue-700 flex flex-col md:flex-row items-center justify-center gap-6 text-sm md:text-base font-medium">
+                    <div class="flex items-center gap-2">
+                        <!-- Icon: Credit Card -->
+                        <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="14" x="2" y="5" rx="2" stroke-width="2"></rect><line x1="2" x2="22" y1="10" y2="10" stroke-width="2"></line></svg>
+                        お支払いはカード払いで負担ゼロ
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <!-- Icon: File Text -->
+                        <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        政治資金報告用の領収書発行可能
+                    </div>
+                </div>
+            </div>
+            <p class="text-sm text-gray-500 mt-6">※品質維持のため、最低利用期間は6ヶ月とさせていただいております。</p>
+        </div>
+    </section>
+
+    <!-- 比較表：安さの秘密 -->
+    <section class="py-20 bg-brand-light">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4 font-serif">初期費用0円・月980円の秘密</h2>
+                <p class="text-gray-600">最新テクノロジーの活用と、無駄を徹底的に省いた独自のビジネスモデルが、この価格を実現しました。</p>
+            </div>
+
+            <div class="overflow-x-auto pb-8">
+                <table class="w-full text-left border-collapse min-w-[600px]">
+                    <thead>
+                        <tr>
+                            <th class="p-4 md:p-6 w-1/4"></th>
+                            <th class="p-4 md:p-6 w-3/8 text-center bg-gray-200 text-gray-600 rounded-t-xl font-bold text-lg">従来の制作会社</th>
+                            <th class="p-4 md:p-6 w-3/8 text-center bg-brand-blue text-white rounded-t-xl shadow-lg border-b-4 border-brand-gold font-bold text-xl relative">
+                                <!-- Badge -->
+                                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-red text-white text-xs px-3 py-1 rounded-full shadow-md whitespace-nowrap">
+                                    圧倒的オススメ！
+                                </div>
+                                スポットpage
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white">
+                        <!-- Row 1 -->
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 md:p-6 font-bold text-gray-800 bg-gray-50">制作手法</td>
+                            <td class="p-4 md:p-6 text-center text-gray-600">
+                                <div class="flex flex-col items-center">
+                                    <svg class="w-8 h-8 text-gray-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    数十人のチームで手作業<br><span class="text-xs mt-1 text-gray-400">（時間がかかり人件費が高騰）</span>
+                                </div>
+                            </td>
+                            <td class="p-4 md:p-6 text-center bg-blue-50 border-x-2 border-brand-blue font-bold text-brand-blue">
+                                <div class="flex flex-col items-center">
+                                    <svg class="w-8 h-8 text-brand-gold mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    最新AIによる高速生成<br><span class="text-xs mt-1 font-normal text-gray-600">（高品質なコードを瞬時に構築）</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Row 2 -->
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 md:p-6 font-bold text-gray-800 bg-gray-50">サーバー代</td>
+                            <td class="p-4 md:p-6 text-center text-gray-600">
+                                月数千円を上乗せして請求<br><span class="text-xs mt-1 text-gray-400">（見えない維持費の負担）</span>
+                            </td>
+                            <td class="p-4 md:p-6 text-center bg-blue-50 border-x-2 border-brand-blue font-bold text-brand-blue">
+                                世界標準インフラの<br>無料枠を最大限活用<br><span class="text-xs mt-1 font-normal text-gray-600">（Cloudflare Pages等を利用しコスト0化）</span>
+                            </td>
+                        </tr>
+                        <!-- Row 3 -->
+                        <tr>
+                            <td class="p-4 md:p-6 font-bold text-gray-800 bg-gray-50 rounded-bl-xl">利益構造</td>
+                            <td class="p-4 md:p-6 text-center text-gray-600 rounded-br-xl">
+                                制作時の初期費用で<br>大きく稼ぐモデル
+                            </td>
+                            <td class="p-4 md:p-6 text-center bg-blue-50 border-x-2 border-b-2 border-brand-blue rounded-b-xl font-bold text-brand-blue">
+                                継続利用で少しずつ<br>頂戴するサブスクモデル<br><span class="text-xs mt-1 font-normal text-gray-600">（長く愛されるサービスを目指します）</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 機能紹介 -->
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4 font-serif">サイトで実現できること</h2>
+                <p class="text-gray-600 text-lg">月額980円でも、妥協のない充実した機能を備えています。</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-shadow group">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center text-brand-blue mb-6 group-hover:scale-110 transition-transform">
+                        <!-- Icon: Share2 -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="5" r="3" stroke-width="2"/><circle cx="6" cy="12" r="3" stroke-width="2"/><circle cx="18" cy="19" r="3" stroke-width="2"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49" stroke-width="2"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49" stroke-width="2"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">SNS・ブログ連携</h3>
+                    <p class="text-gray-600">X（旧Twitter）、Facebook、Instagram、そしてアメブロなどの既存ブログへの導線を美しく配置。支持者とのつながりを強化します。</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-shadow group">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center text-brand-blue mb-6 group-hover:scale-110 transition-transform">
+                        <!-- Icon: Image -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" stroke-width="2"/><circle cx="9" cy="9" r="2" stroke-width="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" stroke-width="2"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">お好みの画像挿入</h3>
+                    <p class="text-gray-600">演説風景、地域での活動写真、ポスター画像など、あなたの魅力を伝える画像を自由に配置可能。ビジュアルで有権者に訴えかけます。</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-shadow group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded-bl-lg z-10">安心サポート</div>
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center text-brand-blue mb-6 group-hover:rotate-180 transition-transform duration-500">
+                        <!-- Icon: RefreshCw -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" stroke-width="2"/><path d="M3 3v5h5" stroke-width="2"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">年間3回まで更新依頼</h3>
+                    <p class="text-gray-600">画像の差し替えや、政策の文言変更など、年間3回まで無料で更新作業を代行いたします。専門知識がなくても常に最新情報を保てます。</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-blue-50 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between border border-blue-100">
+                <div class="flex items-center gap-4 mb-4 md:mb-0">
+                    <div class="bg-white p-2 rounded-full shadow-sm">
+                        <!-- Icon: Smartphone Monitor -->
+                        <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="14" height="8" x="5" y="2" rx="1" stroke-width="2"/><rect width="20" height="10" x="2" y="12" rx="2" stroke-width="2"/></svg>
+                    </div>
+                    <span class="font-bold text-gray-800">スマホ・PC両対応（レスポンシブデザイン）標準装備</span>
+                </div>
+                <p class="text-sm text-gray-600">どの端末から見ても美しく、有権者を取りこぼしません。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- サンプルサイト -->
+    <section id="samples" class="py-24 bg-brand-light">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4 font-serif">デザインサンプル</h2>
+                <p class="text-gray-600 text-lg">立場や目的に合わせた、最適化されたレイアウトをご用意しています。</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Sample 1 -->
+                <a href="#" class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" alt="地方議員向けサンプル" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <span class="bg-brand-blue text-xs font-bold px-2 py-1 rounded mb-2 inline-block">SAMPLE 01</span>
+                            <h3 class="text-xl font-bold">地方議員向け</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 text-sm mb-4">日々の活動報告や地域の実績を分かりやすく伝える、信頼感を重視したベーシックなレイアウト。</p>
+                        <span class="text-brand-blue font-bold text-sm flex items-center gap-1 group-hover:text-blue-800">
+                            サンプルを見る <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Sample 2 -->
+                <a href="#" class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" alt="候補者向けサンプル" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <span class="bg-brand-red text-xs font-bold px-2 py-1 rounded mb-2 inline-block">SAMPLE 02</span>
+                            <h3 class="text-xl font-bold">候補者向け</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 text-sm mb-4">政策の柱や熱意をダイナミックに表現。有権者の印象に残る、インパクト重視のレイアウト。</p>
+                        <span class="text-brand-blue font-bold text-sm flex items-center gap-1 group-hover:text-blue-800">
+                            サンプルを見る <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Sample 3 -->
+                <a href="#" class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?auto=format&fit=crop&q=80&w=800" alt="会派組織等向けサンプル" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <span class="bg-gray-800 text-xs font-bold px-2 py-1 rounded mb-2 inline-block">SAMPLE 03</span>
+                            <h3 class="text-xl font-bold">会派・組織向け</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 text-sm mb-4">所属議員の紹介や、会派としての提言・マニフェストを整理して掲載する、情報量対応レイアウト。</p>
+                        <span class="text-brand-blue font-bold text-sm flex items-center gap-1 group-hover:text-blue-800">
+                            サンプルを見る <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTAセクション -->
+    <section id="contact" class="py-24 bg-gradient-to-br from-brand-blue to-blue-900 text-white text-center relative overflow-hidden">
+        <!-- 背景装飾 -->
+        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[800px] h-[800px] bg-white opacity-5 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-3xl mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-5xl font-black mb-6 font-serif">まずは無料相談から</h2>
+            <p class="text-blue-100 mb-10 text-lg">
+                最短即日でWebサイトの土台が完成。<br>
+                面倒な作業はすべて私たちが代行します。今すぐ、あなたの政治活動をアップデートしませんか？
+            </p>
+            
+            <a href="#" class="inline-block bg-brand-red hover:bg-red-700 text-white text-xl font-bold px-12 py-5 rounded-full shadow-2xl transition-all transform hover:scale-105">
+                Webからお申し込み・お問い合わせ
+            </a>
+            <p class="mt-6 text-sm text-blue-200">24時間受付中 / ご相談は無料です</p>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-gray-900 text-gray-400 py-16 border-t-4 border-brand-gold">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 bg-gray-700 rounded flex items-center justify-center text-white font-bold font-serif">S</div>
+                    <span class="font-bold text-xl tracking-tight text-white">スポットpage</span>
+                </div>
+                <p class="mb-4 text-sm leading-relaxed">
+                    政治家のための初期費用0円・月額980円Web制作代行サービス。<br>
+                    信頼を築き、活動を広く伝えるための最良の選択肢を提供します。
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-white font-bold mb-4">運営</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><strong>株式会社EIM</strong></li>
+                        <li><a href="#" class="hover:text-white transition-colors">運営会社情報</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">利用規約</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">プライバシーポリシー</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">特定商取引法に基づく表記</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">関連サービス</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <a href="#" class="hover:text-white transition-colors flex items-start gap-2 group">
+                                <svg class="w-5 h-5 text-brand-red mt-0.5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>
+                                    政治家専用ショート動画<br>制作クラウド<br>
+                                    <strong class="text-gray-300">「スポットmovie」</strong>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto px-4 mt-12 pt-8 border-t border-gray-800 text-center text-sm">
+            <p>&copy; <span id="year"></span> EIM Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // フッターの年号を自動更新
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
