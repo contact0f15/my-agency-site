@@ -66,49 +66,51 @@
     </header>
 
     <!-- ヒーローセクション -->
-    <section class="relative pt-20 pb-20 md:pt-32 md:pb-32 bg-hero overflow-hidden">
+    <section class="relative pt-20 pb-16 lg:pt-32 lg:pb-32 bg-hero overflow-hidden">
         <!-- 背景をより深みのあるネイビーに調整 -->
         <div class="absolute inset-0 bg-[#0b1727]/90 mix-blend-multiply"></div>
         <div class="absolute inset-0 bg-gradient-to-br from-[#0b1727] via-[#0f2340] to-transparent"></div>
         
         <div class="relative z-10 max-w-7xl mx-auto px-4 mt-6 md:mt-16">
-            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-0 relative">
+            <!-- スマホ時に画像がはみ出して重なるように min-height を設定し、relative でレイヤー構造を作成 -->
+            <div class="relative flex flex-col lg:flex-row items-start lg:items-center min-h-[700px] lg:min-h-0">
                 
-                <!-- 左側：テキストエリア -->
-                <div class="w-full lg:w-[45%] text-center lg:text-left z-20 relative">
+                <!-- 左側：テキストエリア (スマホでもすべて text-left に統一) -->
+                <div class="w-full sm:w-[90%] lg:w-[45%] text-left z-20 relative pt-2 lg:pt-0">
                     <!-- 特化情報ラベル -->
-                    <span class="inline-block py-1.5 px-4 md:px-5 rounded-full border border-brand-gold/60 text-brand-gold font-medium text-xs sm:text-sm md:text-base mb-4 md:mb-6 tracking-wider md:tracking-widest backdrop-blur-sm bg-brand-blue/20">
+                    <span class="inline-block py-1.5 px-4 md:px-5 rounded-full border border-brand-gold/60 text-brand-gold font-medium text-[11px] sm:text-sm md:text-base mb-4 md:mb-6 tracking-wider md:tracking-widest backdrop-blur-sm bg-brand-blue/20 shadow-md">
                         政治家（地方議員・候補者・会派）特化型WEB制作
                     </span>
                     
                     <!-- キャッチコピー -->
-                    <h1 class="font-serif text-[28px] leading-[1.3] sm:text-4xl md:text-5xl lg:text-[4rem] font-black text-white md:leading-tight mb-8 md:mb-10 drop-shadow-2xl">
+                    <h1 class="font-serif text-[32px] leading-[1.3] sm:text-4xl md:text-5xl lg:text-[4rem] font-black text-white md:leading-tight mb-8 md:mb-10 drop-shadow-2xl">
                         圧倒的な信頼を、<br>
                         驚きの価格で。
                     </h1>
                     
-                    <!-- 価格強調パネル（両方の強みを目立たせ、スマホ最適化） -->
-                    <div class="mb-8 md:mb-10 p-5 sm:p-6 md:p-8 bg-gradient-to-br from-[#1a2c4e]/80 to-[#0f172a]/80 backdrop-blur-md border border-brand-gold/40 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] w-full sm:inline-block sm:w-auto text-left relative transform hover:-translate-y-1 transition-transform duration-300">
+                    <!-- 価格強調パネル（画像の上に透けて重なるように、やや幅を抑える） -->
+                    <div class="mb-6 md:mb-10 p-5 sm:p-6 md:p-8 bg-gradient-to-br from-[#1a2c4e]/85 to-[#0f172a]/85 backdrop-blur-md border border-brand-gold/40 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] inline-block w-[95%] sm:w-auto text-left relative transform hover:-translate-y-1 transition-transform duration-300">
                         <!-- 絶対お得バッジ -->
-                        <div class="absolute -top-3.5 md:-top-4 left-1/2 transform -translate-x-1/2 sm:translate-x-0 sm:left-6 bg-gradient-to-r from-brand-gold to-yellow-500 text-[#0b1727] font-bold text-[10px] sm:text-xs md:text-sm px-4 sm:px-6 py-1 md:py-1.5 rounded-full shadow-lg whitespace-nowrap z-10">
+                        <div class="absolute -top-3.5 md:-top-4 left-6 bg-gradient-to-r from-brand-gold to-yellow-500 text-[#0b1727] font-bold text-[10px] sm:text-xs md:text-sm px-4 sm:px-6 py-1 md:py-1.5 rounded-full shadow-lg whitespace-nowrap z-10">
                             業界最安水準の圧倒的コスパ！
                         </div>
                         
                         <div class="flex flex-col sm:flex-row gap-5 sm:gap-8 md:gap-10">
                             <!-- 初期費用0円 -->
-                            <div class="flex-1 text-center sm:text-left border-b border-white/10 sm:border-b-0 sm:border-r sm:border-white/20 pb-4 sm:pb-0 sm:pr-8 md:pr-10 relative">
+                            <div class="flex-1 text-left border-b border-white/10 sm:border-b-0 sm:border-r sm:border-white/20 pb-4 sm:pb-0 sm:pr-8 md:pr-10 relative">
                                 <div class="font-medium text-[10px] md:text-xs text-brand-gold mb-1 tracking-wider opacity-80">INITIAL COST</div> 
                                 <div class="font-bold text-sm md:text-base text-white mb-0.5">初期費用</div> 
-                                <div class="flex items-baseline justify-center sm:justify-start gap-1">
+                                <div class="flex items-baseline justify-start gap-1">
+                                    <!-- 前回の修正通り 0 をゴールドに -->
                                     <span class="text-brand-gold text-6xl sm:text-7xl md:text-8xl font-bold leading-none tracking-tighter drop-shadow-md">0</span> 
                                     <span class="text-lg md:text-xl text-white font-bold">円</span>
                                 </div>
                             </div>
                             <!-- 月額980円 -->
-                            <div class="flex-1 text-center sm:text-left pt-1 sm:pt-0 relative">
+                            <div class="flex-1 text-left pt-1 sm:pt-0 relative">
                                 <div class="font-medium text-[10px] md:text-xs text-brand-gold mb-1 tracking-wider opacity-80">MONTHLY FEE</div> 
                                 <div class="font-bold text-sm md:text-base text-white mb-0.5">月額</div> 
-                                <div class="flex items-baseline justify-center sm:justify-start gap-1">
+                                <div class="flex items-baseline justify-start gap-1">
                                     <span class="text-brand-gold text-6xl sm:text-7xl md:text-8xl font-bold leading-none tracking-tighter drop-shadow-md">980</span> 
                                     <span class="text-lg md:text-xl text-brand-gold font-bold">円</span>
                                 </div>
@@ -117,14 +119,16 @@
                         </div>
                     </div>
                     
-                    <!-- 背景に半透明の帯を敷いて視認性を高めました -->
-                    <p class="text-sm sm:text-base md:text-lg text-brand-gold font-bold mb-8 md:mb-10 leading-relaxed bg-[#0b1727]/70 backdrop-blur-sm inline-block px-5 py-2.5 rounded-xl border border-white/10 shadow-lg">
-                        プロフェッショナルな政治活動の拠点を、<br class="hidden lg:block">この価格で始められます。
-                    </p>
+                    <div class="block">
+                        <!-- 背景に半透明の帯を敷いて視認性を高めたテキスト -->
+                        <p class="text-sm sm:text-base md:text-lg text-brand-gold font-bold mb-6 md:mb-10 leading-relaxed bg-[#0b1727]/70 backdrop-blur-sm inline-block px-5 py-2.5 rounded-xl border border-white/10 shadow-lg">
+                            プロフェッショナルな政治活動の拠点を、<br class="hidden lg:block">この価格で始められます。
+                        </p>
+                    </div>
 
-                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <div class="flex flex-col sm:flex-row justify-start gap-4">
                         <!-- CTAボタン -->
-                        <a href="https://calendar.app.google/FrXyRiGnJpCUUxP26" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#dc2626] to-[#b91c1c] hover:from-[#b91c1c] hover:to-[#991b1b] text-white text-base md:text-lg font-bold px-6 py-4 md:px-10 rounded-full shadow-[0_0_30px_rgba(220,38,38,0.4)] border border-red-500/30 transition-all transform hover:scale-105 flex items-center justify-center gap-3">
+                        <a href="https://calendar.app.google/FrXyRiGnJpCUUxP26" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#dc2626] to-[#b91c1c] hover:from-[#b91c1c] hover:to-[#991b1b] text-white text-base md:text-lg font-bold px-6 py-4 md:px-10 rounded-full shadow-[0_0_30px_rgba(220,38,38,0.4)] border border-red-500/30 transition-all transform hover:scale-105 flex items-center justify-center gap-3 w-[90%] sm:w-auto">
                             今すぐ無料オンライン相談
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
                         </a>
@@ -132,9 +136,9 @@
                     <p class="text-gray-400 mt-4 md:mt-5 text-[10px] md:text-xs tracking-wide">※最短即日〜数営業日で公開可能 / カード払い対応</p>
                 </div>
 
-                <!-- 右側：画像エリア（スマホ時もダイナミックに表示） -->
-                <div class="w-full lg:w-[65%] relative mt-8 lg:mt-0 lg:absolute lg:-right-10 lg:top-1/2 lg:-translate-y-1/2 z-10 flex justify-center lg:justify-end pointer-events-none">
-                    <div class="relative w-[110%] sm:w-full max-w-[900px] group scale-100 lg:scale-125 transform lg:origin-right -ml-[5%] sm:ml-0">
+                <!-- 右側：画像エリア（スマホ時は【右下】に絶対配置し、テキストレイヤーの下に潜り込ませる） -->
+                <div class="absolute bottom-0 -right-[20%] w-[130%] sm:-bottom-10 sm:-right-10 sm:w-[90%] md:w-[80%] lg:w-[65%] lg:top-1/2 lg:-translate-y-1/2 lg:-right-10 z-10 flex justify-end pointer-events-none">
+                    <div class="relative w-full max-w-[900px] group scale-100 lg:scale-125 transform lg:origin-right">
                         <!-- ★ 画像を main-image.png のまま維持 -->
                         <img src="main-image.png" alt="PC・スマホ対応サイトイメージ" class="w-full h-auto object-contain relative z-10 drop-shadow-[0_20px_30px_rgba(0,0,0,0.5)] lg:drop-shadow-[0_30px_50px_rgba(0,0,0,0.5)]">
                     </div>
